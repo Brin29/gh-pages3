@@ -1,7 +1,7 @@
 import "./App.css";
 import Index from "./components/Main/main";
 import Header from "./components/Header/Header";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import PerfilUsuario from "./components/PerfilUsuario/PerfilUsuario";
 import Footer from "./components/footer/Footer";
 import Catalogo from "./components/catalogo/Catalogo";
@@ -19,8 +19,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="catalogo" element={<Catalogo />} />
-          <Route path="usuario" element={<PerfilUsuario />} />
+          <Route path="/catalogo" element={<Catalogo />} />
+          <Route path="/usuario" element={<PerfilUsuario />} />
           <Route path="/product/:id" element={<PaymentPage />} />
           <Route path="/carrito" element={<Carrito />} />
           <Route path="/favorito" element={<Favoritos products={products} />} /> 
